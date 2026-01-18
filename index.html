@@ -4,61 +4,225 @@
 <meta charset="UTF-8">
 <title>Bellique Studios | Premium Women's Salon</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* RESET */
+*{box-sizing:border-box}
+
+/* BODY */
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
 background:linear-gradient(120deg,#fbc2eb,#a6c1ee,#fad0c4);
+overflow-x:hidden;
 }
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(8px);
+z-index:999;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+nav a{
+text-decoration:none;
+margin:0 15px;
+color:#111;
+font-weight:500;
+}
+nav a:hover{color:#a18cd1}
+
+/* HERO */
 header{
-padding:120px 20px;
+padding:160px 20px 120px;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4)),
-url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80") center/cover;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4)),
+url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80")
+center/cover;
 color:#fff;
+animation:fadeUp 1.2s ease;
 }
 header h1{
 font-family:'Playfair Display',serif;
-font-size:3.2rem;
-background:linear-gradient(90deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0);
+font-size:3.4rem;
+background:linear-gradient(90deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
-section{max-width:1200px;margin:auto;padding:80px 20px;}
+header p{font-size:1.2rem}
+
+/* SECTIONS */
+section{
+max-width:1200px;
+margin:auto;
+padding:90px 20px;
+animation:fadeUp 1s ease;
+}
+h2{
+font-family:'Playfair Display',serif;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:35px;
 }
+
+/* CARDS */
 .card{
 background:#fff;
-border-radius:20px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 20px 40px rgba(0,0,0,.1);
 text-decoration:none;
 color:#111;
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+transform:translateY(20px);
+opacity:0;
+animation:cardFade 1s ease forwards;
 }
-.card img{width:100%;height:220px;object-fit:cover}
+.card:nth-child(1){animation-delay:.2s}
+.card:nth-child(2){animation-delay:.4s}
+.card:nth-child(3){animation-delay:.6s}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
 .card div{padding:25px}
 .card h3{font-family:'Playfair Display',serif}
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+transition:.4s ease;
+}
+
+/* BOOK NOW BUTTON */
+.book-btn{
+display:inline-block;
+padding:20px 60px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1);
+color:#fff;
+cursor:pointer;
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+animation:pulse 2s infinite;
+}
+
+/* MODAL */
+#bookingModal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.6);
+z-index:9999;
+animation:fadeIn .4s ease;
+}
+.modal-box{
+max-width:450px;
+margin:80px auto;
+background:#fff;
+padding:40px;
+border-radius:25px;
+animation:scaleUp .4s ease;
+position:relative;
+}
+.modal-box h2{text-align:center}
+.modal-box input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
+}
+.modal-box button{
+width:100%;
+padding:14px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#84fab0,#8fd3f4);
+font-size:16px;
+cursor:pointer;
+}
+.close{
+position:absolute;
+top:15px;
+right:20px;
+font-size:24px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#fff;
+padding:50px 20px;
+text-align:center;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes cardFade{
+to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.05)}
+}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleUp{from{transform:scale(.8)}to{transform:scale(1)}}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+<strong>Bellique Studios</strong>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact Us</a>
+</div>
+</nav>
+
+<!-- HERO -->
 <header>
 <h1>Bellique Studios</h1>
-<p>Luxury beauty experiences curated for modern Indian women</p>
+<p>Luxury beauty experiences curated for modern women</p>
 </header>
 
-<section>
-<h2 style="text-align:center;font-family:'Playfair Display',serif">Our Expertise</h2>
-<p style="text-align:center;max-width:700px;margin:20px auto">
-We offer carefully curated beauty services focusing on hair artistry,
-makeup excellence, and rejuvenating skin treatments.
+<!-- ABOUT -->
+<section id="about">
+<h2>About Bellique Studios</h2>
+<p style="text-align:center;max-width:750px;margin:auto">
+At Bellique Studios, beauty is a personalised luxury. Every service is curated with precision,
+premium products and a deep understanding of individual style.
 </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
 
 <div class="grid">
 
@@ -66,28 +230,88 @@ makeup excellence, and rejuvenating skin treatments.
 <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80">
 <div>
 <h3>Hair Styling</h3>
-<p>Trendy cuts, bridal buns, curls & premium hair care.</p>
+<p>Precision cuts, bridal hairstyles & advanced treatments.</p>
 </div>
 </a>
 
 <a href="makeup.html" class="card">
-<img src="indian-bride-portrait.jpg">
+<img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?auto=format&fit=crop&w=800&q=80">
 <div>
 <h3>Makeup</h3>
-<p>From haldi glow to bridal glamour.</p>
+<p>Bridal, party & flawless HD makeup.</p>
 </div>
 </a>
 
 <a href="skin-treatment.html" class="card">
 <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=800&q=80">
 <div>
-<h3>Skin Treatments</h3>
-<p>Facials, hydra facials, mani-pedi & waxing.</p>
+<h3>Skin Treatment</h3>
+<p>Luxury facials, glow therapies & self-care rituals.</p>
 </div>
 </a>
 
 </div>
+
+<div style="text-align:center;margin-top:70px">
+<button class="book-btn" onclick="openBooking()">Book Now</button>
+</div>
 </section>
+
+<!-- BOOKING MODAL -->
+<div id="bookingModal">
+<div class="modal-box">
+<span class="close" onclick="closeBooking()">×</span>
+<h2>Book Your Appointment</h2>
+
+<input id="custName" placeholder="Your Name">
+<input id="custPhone" placeholder="Phone Number">
+<input id="custEmail" type="email" placeholder="Email ID">
+<input id="custDateTime" type="datetime-local">
+
+<button onclick="sendWhatsApp()">Confirm Booking</button>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+<p><strong>Location</strong><br>
+Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
+Vaibhav Khand, Indirapuram,<br>
+Ghaziabad, Uttar Pradesh
+</p>
+
+<p style="margin-top:20px">
+<strong>Contact Us</strong><br>
+Name: Anindita Roy Barman<br>
+Phone Number: 6377921395
+</p>
+
+<p style="margin-top:30px;color:#aaa">
+© 2026 Bellique Studios. All Rights Reserved.
+</p>
+</footer>
+
+<script>
+function openBooking(){
+document.getElementById("bookingModal").style.display="block";
+const now=new Date();
+now.setMinutes(now.getMinutes()-now.getTimezoneOffset());
+document.getElementById("custDateTime").min=now.toISOString().slice(0,16);
+}
+function closeBooking(){
+document.getElementById("bookingModal").style.display="none";
+}
+function sendWhatsApp(){
+const n=document.getElementById("custName").value;
+const p=document.getElementById("custPhone").value;
+const e=document.getElementById("custEmail").value;
+const d=document.getElementById("custDateTime").value;
+if(!n||!p||!e||!d){alert("Please fill all details");return;}
+const msg=`New Appointment Booking%0AName: ${n}%0APhone: ${p}%0AEmail: ${e}%0ADate & Time: ${d}`;
+window.open(`https://wa.me/916377921395?text=${msg}`,"_blank");
+closeBooking();
+}
+</script>
 
 </body>
 </html>
