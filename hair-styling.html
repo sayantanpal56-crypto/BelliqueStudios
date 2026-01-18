@@ -12,6 +12,78 @@
   --gold:#c59d5f;
   --dark:#111;
 }
+/* ===== TOP BAR ===== */
+.main-nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+  z-index:9999;
+}
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+}
+.nav-links a{
+  margin-left:24px;
+  text-decoration:none;
+  color:#111;
+  font-weight:500;
+}
+.nav-links a:hover{
+  color:#a18cd1;
+}
+/* ===== OFFERS SLIDER ===== */
+.offer-slider{
+  margin-top:120px;
+  height:420px;
+  border-radius:35px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 40px 80px rgba(0,0,0,0.2);
+}
+.offer-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transform:scale(1.12);
+  transition:1.2s ease;
+  background-size:cover;
+  background-position:center;
+}
+.offer-slide.active{
+  opacity:1;
+  transform:scale(1);
+}
+.offer-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,0.65),rgba(0,0,0,0.25));
+  display:flex;
+  align-items:center;
+  padding:80px;
+}
+.offer-text h3{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;
+  color:#fff;
+}
+.offer-text p{
+  color:#eee;
+  font-size:1.2rem;
+  max-width:520px;
+  line-height:1.8;
+}
 
 body{
   margin:0;
@@ -173,6 +245,40 @@ h1{
 </head>
 
 <body>
+<!-- ===== TOP BAR (SAME AS HOME) ===== -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <strong class="logo">Bellique Studios</strong>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+  <!-- ===== OFFERS : HAIR ===== -->
+<div class="offer-slider">
+  <div class="offer-slide active"
+       style="background-image:url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f')">
+    <div class="offer-overlay">
+      <div class="offer-text">
+        <h3>Hair Styling Privilege</h3>
+        <p>Complimentary hair spa on styling services above ₹3000</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="offer-slide"
+       style="background-image:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1')">
+    <div class="offer-overlay">
+      <div class="offer-text">
+        <h3>Bridal Hair Packages</h3>
+        <p>Special pricing on bridal & engagement hairstyles</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
 
 <section>
 <h1>Hair Styling</h1>
@@ -297,6 +403,14 @@ h1{
 </footer>
 
 <script>
+let slides=document.querySelectorAll(".offer-slide");
+let i=0;
+setInterval(()=>{
+  slides[i].classList.remove("active");
+  i=(i+1)%slides.length;
+  slides[i].classList.add("active");
+},4500);
+  
 let selectedService="";
 
 function openForm(service){
@@ -340,6 +454,15 @@ Time: ${time.value}`;
   );
   closeForm();
 }
+</script>
+<script>
+let offers=document.querySelectorAll('.offer-slide');
+let i=0;
+setInterval(()=>{
+  offers[i].classList.remove('active');
+  i=(i+1)%offers.length;
+  offers[i].classList.add('active');
+},4500);
 </script>
 
 </body>
