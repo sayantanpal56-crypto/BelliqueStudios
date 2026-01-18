@@ -244,53 +244,95 @@ h1{
 }
 
 /* FOOTER */
-.premium-footer{
-  background:#1c1c1c;
-  color:#bdbdbd;
-  padding:80px 30px 30px;
+/* ===== PREMIUM RESPONSIVE FOOTER ===== */
+.site-footer{
+  background:radial-gradient(circle at top,#1a1a1a,#000);
+  color:#e6e6e6;
+  padding:90px 60px 40px;
+  font-family:'Poppins',sans-serif;
 }
+
 .footer-inner{
-  max-width:1300px;
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:120px;
+  align-items:start;
 }
-.footer-col h3{
+
+.footer-brand h3{
   font-family:'Playfair Display',serif;
-  font-size:2.6rem;
-  color:#ffffff;
-  margin-bottom:25px;
-}
-.footer-title{
-  font-size:1.1rem;
-  font-weight:500;
+  font-size:2.2rem;
   margin-bottom:20px;
-  color:#dcdcdc;
-}
-.footer-col p{
-  font-size:1rem;
-  line-height:2;
-  margin:0;
-}
-.footer-highlight{
-  font-size:1.05rem;
   color:#ffffff;
 }
+
+.footer-brand p{
+  font-size:1.05rem;
+  line-height:1.9;
+  color:#cccccc;
+  max-width:420px;
+}
+
+.footer-contact h4{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  margin-bottom:25px;
+  color:#ffffff;
+}
+
+.footer-contact p{
+  font-size:1.05rem;
+  line-height:2;
+  margin:0 0 18px;
+  color:#cccccc;
+}
+
+.footer-contact .name{
+  margin-top:30px;
+  font-weight:500;
+  color:#ffffff;
+}
+
+.footer-contact .phone,
+.footer-contact .email{
+  font-size:1.05rem;
+}
+
 .footer-bottom{
-  margin-top:60px;
-  text-align:right;
+  text-align:center;
+  margin-top:80px;
   font-size:0.95rem;
   color:#9a9a9a;
 }
 
-@media(max-width:900px){
-  .service-block{grid-template-columns:1fr}
-  h1{font-size:2.4rem}
-  .service-img img{height:300px}
-  .footer-inner{grid-template-columns:1fr;gap:60px}
-  .footer-bottom{text-align:center}
+/* ===== MOBILE OPTIMISATION (SAFE) ===== */
+@media(max-width:768px){
+  .site-footer{
+    padding:70px 30px 35px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:60px;
+    text-align:left;
+  }
+
+  .footer-brand h3{
+    font-size:2rem;
+  }
+
+  .footer-contact h4{
+    font-size:1.6rem;
+  }
+
+  .footer-bottom{
+    margin-top:60px;
+    font-size:0.9rem;
+  }
 }
+
 </style>
 </head>
 
@@ -432,33 +474,40 @@ h1{
   </div>
 </div>
 
-<footer class="premium-footer">
+<footer class="site-footer" id="contact">
   <div class="footer-inner">
-    <div class="footer-col">
-      <h3>Location</h3>
-      <p class="footer-title">Bellique Studios</p>
+
+    <!-- LEFT: BRAND -->
+    <div class="footer-brand">
+      <h3>Bellique Studios</h3>
       <p>
-        Flat no 406, Osimo 2,<br>
-        Mahagun Mansion 2,<br>
-        Vaibhav Khand, Indirapuram,<br>
-        Ghaziabad, Uttar Pradesh
+        Premium salon experiences crafted with care,
+        confidence, and elegance.
       </p>
     </div>
 
-    <div class="footer-col">
-      <h3>Get in touch</h3>
-	  <p style="margin-top:15px;">Anindita Roy Barman</p>
-	  <p style="margin-top:25px;">Call us:</p>
-      <p class="footer-highlight">6377921395</p>
-      <p>Email us:</p>
-      <p class="footer-highlight">belliquestudios@gmail.com</p>
+    <!-- RIGHT: CONTACT -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+
+      <p>
+        Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
+        Vaibhav Khand, Indirapuram,<br>
+        Ghaziabad, Uttar Pradesh
+      </p>
+
+      <p class="name">Anindita Roy Barman</p>
+      <p class="phone">📞 6377921395</p>
+      <p class="email">Email us: bellique​studios@gmail.com</p>
     </div>
+
   </div>
 
   <div class="footer-bottom">
     © 2026 Bellique Studios. All Rights Reserved.
   </div>
 </footer>
+
 
 <script>
 let slides=document.querySelectorAll(".offer-slide");
