@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Makeup Services | Bellique Studios</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=1200">
+	
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -13,7 +13,7 @@
   --dark:#111;
 }
 /* ===== GLOBAL ===== */
-	
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
   
 body{
@@ -22,6 +22,7 @@ body{
   background:radial-gradient(circle at top left,#fff1eb,#ace0f9,#fbc2eb);
   color:var(--dark);
   adding-top:80px; /* space for fixed navbar */
+  -webkit-text-size-adjust:100%;
 }
 
 /* ===== TOP BAR ===== */
@@ -158,7 +159,7 @@ h1{
   color:var(--gold);
 }
 
-.service-content p{
+.service-content p,.service-content ul{{
   font-size:1.05rem;
   line-height:1.9;
 }
@@ -446,10 +447,11 @@ h1{
 
     <div class="footer-col">
       <h3>Get in touch</h3>
-      <p>Name:</p>
-      <p class="footer-highlight">Anindita Roy Barman</p>
-      <p style="margin-top:20px;">Call us:</p>
+	  <p style="margin-top:15px;">Anindita Roy Barman</p>
+	  <p style="margin-top:25px;">Call us:</p>
       <p class="footer-highlight">6377921395</p>
+      <p>Email us:</p>
+      <p class="footer-highlight">belliquestudios@gmail.com</p>
     </div>
   </div>
 
