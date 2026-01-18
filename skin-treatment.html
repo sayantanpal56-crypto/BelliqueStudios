@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Skin Treatments | Bellique Studios</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=1200">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -14,6 +14,7 @@
   --light:#fff;
 }
 /* ===== GLOBAL ===== */
+{box-sizing:border-box}
 html{scroll-behavior:smooth}
   
 body{
@@ -22,6 +23,7 @@ body{
   background:radial-gradient(circle at top left,#fff1eb,#ace0f9,#fbc2eb);
   color:var(--dark);
  padding-top:80px; /* space for fixed navbar */
+ -webkit-text-size-adjust:100%;
 }
 
 /* ===== TOP BAR ===== */
@@ -157,16 +159,10 @@ h1{
   color:var(--gold);
 }
 
-.service-content p{
+.service-content p,ul{
   font-size:1.05rem;
   line-height:1.9;
 }
-
-.service-content ul{
-  padding-left:20px;
-  line-height:2;
-}
-
 .cta-btn{
   display:inline-block;
   margin-top:20px;
@@ -281,11 +277,44 @@ h1{
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
-  .service-block{grid-template-columns:1fr}
-  h1{font-size:2.4rem}
-  .service-img img{height:300px}
-  .footer-inner{grid-template-columns:1fr;gap:60px}
+@media(max-width:768px){
+
+  body{padding-top:70px}
+
+  .menu-toggle{display:block}
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    right:0;
+    width:100%;
+    background:#fff;
+    display:none;
+    flex-direction:column;
+    padding:20px 0;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+  }
+  .nav-links a{
+    margin:14px 0;
+    font-size:1.1rem;
+  }
+  .nav-links.active{display:flex}
+
+  .offer-slider{height:200px}
+  .offer-text h3{font-size:1.5rem}
+
+  .service-block{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  .service-img img{height:260px}
+
+  h1{font-size:2.2rem}
+
+  .footer-inner{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
   .footer-bottom{text-align:center}
 }
 </style>
@@ -296,7 +325,8 @@ h1{
 <nav class="main-nav">
   <div class="nav-container">
     <a href="index.html" class="logo">Bellique Studios</a>
-    <div class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact Us</a>
@@ -530,6 +560,7 @@ Time: ${time.value}`;
     "_blank"
   );
   closeForm();
+  
 }
 </script>
 <script>
@@ -540,6 +571,10 @@ setInterval(()=>{
   i=(i+1)%offers.length;
   offers[i].classList.add('active');
 },4500);
+/* MOBILE MENU */
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
 </script>
 </body>
 </html>
