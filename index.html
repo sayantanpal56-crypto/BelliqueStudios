@@ -14,29 +14,31 @@ html{scroll-behavior:smooth}
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#fafafa;
+background:#f7f6f4;
 color:#222;
 }
 
-/* NAVBAR (Jawed Habib Inspired) */
+/* NAVBAR */
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#fff;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 50px;
+padding:18px 60px;
 z-index:999;
-box-shadow:0 8px 30px rgba(0,0,0,.08);
+box-shadow:0 10px 40px rgba(0,0,0,.08);
 }
 nav strong{
 font-family:'Playfair Display',serif;
-font-size:22px;
+font-size:24px;
+letter-spacing:1px;
 }
 nav a{
-margin:0 18px;
+margin:0 20px;
 text-decoration:none;
 color:#111;
 font-weight:500;
@@ -45,196 +47,209 @@ nav a:hover{color:#a18cd1}
 
 /* HERO */
 header{
-padding:160px 20px 120px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.45)),
-url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80")
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=80")
 center/cover;
 color:#fff;
-text-align:center;
-animation:fadeUp 1.2s ease;
+padding:140px 20px 80px;
 }
 header h1{
 font-family:'Playfair Display',serif;
-font-size:3.6rem;
+font-size:4rem;
+letter-spacing:2px;
 }
 header p{
-max-width:800px;
-margin:20px auto 0;
-font-size:1.2rem;
+font-size:1.25rem;
+line-height:1.8;
+max-width:900px;
+margin:auto;
 }
 
 /* SECTIONS */
 section{
+padding:110px 20px;
+}
+.container{
 max-width:1200px;
 margin:auto;
-padding:90px 20px;
-animation:fadeUp 1s ease;
-}
-h2{
-font-family:'Playfair Display',serif;
-text-align:center;
-margin-bottom:25px;
 }
 
 /* ABOUT */
-.about-text{
-max-width:850px;
-margin:auto;
+.about{
+background:#fff;
+border-radius:40px;
+padding:80px;
+box-shadow:0 40px 80px rgba(0,0,0,.08);
+}
+.about h2{
+font-family:'Playfair Display',serif;
+font-size:2.8rem;
 text-align:center;
-font-size:1.05rem;
-line-height:1.9;
+}
+.about p{
+max-width:900px;
+margin:30px auto 0;
+text-align:center;
+font-size:1.1rem;
+line-height:2;
 }
 
-/* SLIDER */
-.slider{
-position:relative;
+/* OFFERS */
+.offer-slider{
+margin-top:80px;
+height:420px;
+border-radius:35px;
 overflow:hidden;
-border-radius:25px;
-margin-top:50px;
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+position:relative;
+box-shadow:0 40px 80px rgba(0,0,0,.2);
 }
-.slide{
-display:none;
+.offer-slide{
+position:absolute;
+inset:0;
+opacity:0;
+transform:scale(1.12);
+transition:1.2s ease;
+background-size:cover;
+background-position:center;
+}
+.offer-slide.active{
+opacity:1;
+transform:scale(1);
+z-index:1;
+}
+.offer-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.2));
+display:flex;
+align-items:center;
 padding:80px;
-background:linear-gradient(120deg,#fbc2eb,#a6c1ee);
-color:#111;
-text-align:center;
-font-size:1.4rem;
-font-family:'Playfair Display',serif;
 }
-.slide.active{display:block}
+.offer-text h3{
+font-family:'Playfair Display',serif;
+font-size:2.6rem;
+color:#fff;
+}
+.offer-text p{
+color:#eee;
+font-size:1.2rem;
+max-width:520px;
+line-height:1.8;
+}
 
 /* FOUNDER */
 .founder{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
+grid-template-columns:1fr 1.3fr;
+gap:90px;
 align-items:center;
 }
 .founder img{
 width:100%;
-border-radius:25px;
-box-shadow:0 20px 40px rgba(0,0,0,.2);
+border-radius:35px;
+box-shadow:0 40px 80px rgba(0,0,0,.25);
+}
+.founder h2{
+font-family:'Playfair Display',serif;
+font-size:2.8rem;
+}
+.founder p{
+font-size:1.08rem;
+line-height:2;
+margin-top:25px;
 }
 
 /* SERVICES */
+.services{
+background:linear-gradient(120deg,#fbc2eb,#a6c1ee);
+border-radius:40px;
+padding:90px;
+}
+.services h2{
+font-family:'Playfair Display',serif;
+font-size:2.8rem;
+text-align:center;
+margin-bottom:60px;
+}
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:35px;
+gap:40px;
 }
 .card{
 background:#fff;
-border-radius:25px;
+border-radius:30px;
 overflow:hidden;
 text-decoration:none;
 color:#111;
-box-shadow:0 20px 40px rgba(0,0,0,.12);
-transition:.4s;
+box-shadow:0 30px 60px rgba(0,0,0,.15);
+transition:.5s;
 }
-.card:hover{transform:translateY(-10px)}
-.card img{width:100%;height:230px;object-fit:cover}
-.card div{padding:25px}
-.card h3{font-family:'Playfair Display',serif}
+.card:hover{transform:translateY(-14px)}
+.card img{width:100%;height:260px;object-fit:cover}
+.card div{padding:30px}
+.card h3{
+font-family:'Playfair Display',serif;
+font-size:1.6rem;
+}
 
-/* BOOK NOW */
+/* BOOK */
+.book-wrap{text-align:center;margin-top:80px}
 .book-btn{
-display:inline-block;
-margin-top:60px;
-padding:20px 60px;
+padding:22px 70px;
+font-size:18px;
 border:none;
-border-radius:50px;
+border-radius:60px;
 background:linear-gradient(90deg,#ff9a9e,#a18cd1);
 color:#fff;
-font-size:18px;
 cursor:pointer;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
+box-shadow:0 20px 60px rgba(0,0,0,.35);
 animation:pulse 2s infinite;
 }
 
-/* MODAL */
-#bookingModal{
-display:none;
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,.65);
-z-index:9999;
-}
-.modal{
-background:#fff;
-max-width:450px;
-margin:80px auto;
-padding:40px;
-border-radius:25px;
-animation:scaleUp .4s ease;
-position:relative;
-}
-.modal input{
-width:100%;
-padding:14px;
-margin:10px 0;
-border-radius:10px;
-border:1px solid #ccc;
-}
-.modal button{
-width:100%;
-padding:14px;
-border:none;
-border-radius:30px;
-background:linear-gradient(90deg,#84fab0,#8fd3f4);
-font-size:16px;
-cursor:pointer;
-}
-.close{
-position:absolute;
-top:15px;
-right:20px;
-font-size:24px;
-cursor:pointer;
-}
-
-/* FOOTER (Jawed Habib Style) */
+/* FOOTER */
 footer{
 background:#111;
 color:#eee;
-padding:70px 20px 30px;
+padding:90px 20px 40px;
 }
 .footer-grid{
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:50px;
 }
 footer h4{
 font-family:'Playfair Display',serif;
-margin-bottom:15px;
+font-size:1.4rem;
+margin-bottom:20px;
 }
-footer a{color:#aaa;text-decoration:none;display:block;margin:8px 0}
-footer a:hover{color:#fff}
 .copy{
 text-align:center;
-margin-top:40px;
+margin-top:50px;
 color:#aaa;
 font-size:14px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1}}
-@keyframes pulse{50%{transform:scale(1.05)}}
-@keyframes scaleUp{from{transform:scale(.8)}to{transform:scale(1)}}
+@keyframes pulse{50%{transform:scale(1.06)}}
 
 @media(max-width:900px){
+.about,.services{padding:50px}
 .founder{grid-template-columns:1fr}
+header h1{font-size:3rem}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <strong>Bellique Studios</strong>
 <div>
@@ -244,150 +259,132 @@ font-size:14px;
 </div>
 </nav>
 
-<!-- HERO -->
 <header>
+<div>
 <h1>Bellique Studios</h1>
 <p>
-A premium women’s salon where refined artistry, modern techniques,
-and personalised care come together to create timeless beauty experiences.
+A refined beauty destination where luxury meets individuality —
+crafted exclusively for the modern woman.
 </p>
+</div>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
+<div class="container about">
 <h2>About Bellique Studios</h2>
-<p class="about-text">
-Bellique Studios is more than a salon — it is a sanctuary of confidence,
-elegance, and self-expression. Inspired by global beauty standards and
-the professionalism of iconic salon brands, Bellique Studios delivers
-luxury hair, makeup, and skin services curated for the modern Indian woman.
-Every detail, from consultation to completion, is designed to make you feel
-empowered, radiant, and unmistakably you.
-</p>
-
-<!-- OFFERS SLIDER -->
-<div class="slider">
-<div class="slide active">✨ Flat 20% OFF on Your First Visit</div>
-<div class="slide">👰 Exclusive Bridal Hair & Makeup Packages</div>
-<div class="slide">💆 Complimentary Hair Spa on Services Above ₹3000</div>
-</div>
-</section>
-
-<!-- FOUNDER -->
-<section>
-<h2>Meet the Founder</h2>
-<div class="founder">
-<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80">
 <p>
-<strong>Anindita Roy Barman</strong> founded Bellique Studios with a vision
-to redefine beauty as an experience of confidence and comfort.
-Her philosophy blends refined aesthetics with warmth, ensuring every client
-feels understood, celebrated, and beautifully transformed.
+Bellique Studios is a premium women’s salon designed as a sanctuary of elegance,
+confidence, and personalised beauty. Every service is delivered with precision,
+care, and a deep understanding of individual style.
 </p>
+
+<div class="offer-slider">
+<div class="offer-slide active" style="background-image:url('https://images.unsplash.com/photo-1595475038784-bbe439ff41e6')">
+<div class="offer-overlay"><div class="offer-text">
+<h3>Flat 20% OFF</h3>
+<p>A special welcome gesture for your first Bellique experience.</p>
+</div></div></div>
+
+<div class="offer-slide" style="background-image:url('https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd')">
+<div class="offer-overlay"><div class="offer-text">
+<h3>Bridal Luxury</h3>
+<p>Exclusive bridal hair & makeup experiences curated to perfection.</p>
+</div></div></div>
+
+<div class="offer-slide" style="background-image:url('https://images.unsplash.com/photo-1556228578-8c89e6adf883')">
+<div class="offer-overlay"><div class="offer-text">
+<h3>Self-Care Privileges</h3>
+<p>Complimentary hair spa on premium service bookings.</p>
+</div></div></div>
+</div>
 </div>
 </section>
 
-<!-- SERVICES -->
+<section>
+<div class="container founder">
+<img src="Anindita.jpeg" alt="Anindita Roy Barman">
+<div>
+<h2>Meet the Founder</h2>
+<p>
+<strong>Anindita Roy Barman</strong>, the founder and creative force behind Bellique Studios,
+is guided by a singular philosophy — that true beauty begins with confidence and is elevated
+through care, intention, and artistry. With an instinctive eye for elegance and a deep respect
+for individuality, she envisioned Bellique Studios as more than a salon; she created it as a
+refined sanctuary where modern women can pause, feel understood, and rediscover their most
+confident selves.
+<br><br>
+Anindita’s journey into the world of beauty was shaped by her fascination with how thoughtful
+grooming can transform not only appearance, but mindset. She believes that beauty should never
+feel intimidating or impersonal, but intuitive, comforting, and empowering. Drawing inspiration
+from global luxury salons and the evolving aspirations of Indian women, she built a space that
+seamlessly blends international standards with warmth, grace, and personal attention.
+<br><br>
+Every detail at Bellique Studios reflects her vision — from the calm, elegant ambience and
+curated product choices to personalised consultations and honest recommendations. Under her
+leadership, Bellique Studios has become a trusted beauty destination known for refined artistry,
+consistency, and heartfelt service, where every woman leaves radiant, assured, and beautifully
+herself.
+</p>
+</div>
+</div>
+</section>
+
 <section id="services">
-<h2>Our Services</h2>
+<div class="container services">
+<h2>Our Signature Services</h2>
 <div class="grid">
 
 <a href="hair-styling.html" class="card">
 <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f">
-<div><h3>Hair Styling</h3><p>Precision cuts, bridal styles & advanced care</p></div>
+<div><h3>Hair Styling</h3><p>Precision cuts & luxury care</p></div>
 </a>
 
 <a href="makeup.html" class="card">
 <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd">
-<div><h3>Makeup</h3><p>Bridal, party & HD makeup artistry</p></div>
+<div><h3>Makeup</h3><p>Bridal & HD artistry</p></div>
 </a>
 
 <a href="skin-treatment.html" class="card">
 <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883">
-<div><h3>Skin Treatment</h3><p>Luxury facials & rejuvenation rituals</p></div>
+<div><h3>Skin Treatment</h3><p>Advanced facials & rejuvenation</p></div>
 </a>
 
 </div>
 
-<div style="text-align:center">
-<button class="book-btn" onclick="openBooking()">Book Now</button>
+<div class="book-wrap">
+<button class="book-btn">Book Now</button>
+</div>
 </div>
 </section>
 
-<!-- BOOKING MODAL -->
-<div id="bookingModal">
-<div class="modal">
-<span class="close" onclick="closeBooking()">×</span>
-<h2>Book Appointment</h2>
-<input id="name" placeholder="Name">
-<input id="phone" placeholder="Phone">
-<input id="email" placeholder="Email">
-<input id="datetime" type="datetime-local">
-<button onclick="sendWA()">Confirm</button>
-</div>
-</div>
-
-<!-- FOOTER -->
 <footer id="contact">
 <div class="footer-grid">
-
 <div>
 <h4>Bellique Studios</h4>
-<p>Premium salon experiences crafted with care, creativity, and confidence.</p>
+<p>Premium salon experiences crafted with care, confidence, and elegance.</p>
 </div>
-
-<div>
-<h4>Services</h4>
-<a>Hair Styling</a>
-<a>Makeup</a>
-<a>Skin Treatment</a>
-</div>
-
 <div>
 <h4>Contact</h4>
 <p>
 Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
 Vaibhav Khand, Indirapuram,<br>
-Ghaziabad, Uttar Pradesh
-</p>
-<p>
+Ghaziabad, Uttar Pradesh<br><br>
 Anindita Roy Barman<br>
 📞 6377921395
 </p>
 </div>
-
 </div>
-
-<div class="copy">
-© 2026 Bellique Studios. All Rights Reserved.
-</div>
+<div class="copy">© 2026 Bellique Studios. All Rights Reserved.</div>
 </footer>
 
 <script>
-let slides=document.querySelectorAll(".slide");
+let offers=document.querySelectorAll(".offer-slide");
 let i=0;
 setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},3000);
-
-function openBooking(){
-document.getElementById("bookingModal").style.display="block";
-let now=new Date();
-now.setMinutes(now.getMinutes()-now.getTimezoneOffset());
-document.getElementById("datetime").min=now.toISOString().slice(0,16);
-}
-function closeBooking(){
-document.getElementById("bookingModal").style.display="none";
-}
-function sendWA(){
-let n=name.value,p=phone.value,e=email.value,d=datetime.value;
-if(!n||!p||!e||!d){alert("Fill all details");return;}
-let msg=`New Booking%0AName: ${n}%0APhone: ${p}%0AEmail: ${e}%0ADate & Time: ${d}`;
-window.open(`https://wa.me/916377921395?text=${msg}`,"_blank");
-closeBooking();
-}
+offers[i].classList.remove("active");
+i=(i+1)%offers.length;
+offers[i].classList.add("active");
+},4500);
 </script>
 
 </body>
