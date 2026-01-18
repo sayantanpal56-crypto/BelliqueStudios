@@ -261,41 +261,77 @@ h1{
 }
 
 /* LEFT */
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#000;
+  color:#e6e6e6;
+  padding:90px 60px 40px;
+  font-family:'Poppins',sans-serif;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:120px;
+}
+
 .footer-left h3{
   font-family:'Playfair Display',serif;
   font-size:2.2rem;
   margin-bottom:20px;
+  color:#fff;
 }
+
 .footer-left p{
   font-size:1.05rem;
   line-height:1.9;
-  max-width:420px;
   color:#ccc;
+  max-width:420px;
 }
 
-/* RIGHT */
 .footer-right h4{
   font-family:'Playfair Display',serif;
   font-size:1.8rem;
   margin-bottom:25px;
+  color:#fff;
 }
+
 .footer-right p{
   font-size:1.05rem;
   line-height:2;
+  margin-bottom:18px;
   color:#ccc;
-  margin-bottom:15px;
-}
-.footer-right .name{
-  color:#fff;
-  font-weight:500;
 }
 
-/* BOTTOM */
+.footer-right .name{
+  margin-top:30px;
+  font-weight:500;
+  color:#fff;
+}
+
 .footer-bottom{
   text-align:center;
-  margin-top:70px;
+  margin-top:80px;
   font-size:0.95rem;
-  color:#999;
+  color:#9a9a9a;
+}
+
+/* MOBILE — SAME LAYOUT, JUST SPACING */
+@media (max-width: 768px){
+  .site-footer{
+    padding:70px 30px 35px;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr 1fr; /* 👈 SAME layout */
+    gap:40px;
+  }
+
+  .footer-bottom{
+    margin-top:60px;
+  }
 }
 
 </style>
