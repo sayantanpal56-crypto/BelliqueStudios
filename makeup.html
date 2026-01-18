@@ -245,10 +245,8 @@ h1{
 
 /* FOOTER */
 /* ===== PREMIUM RESPONSIVE FOOTER ===== */
+/* ===== FINAL BLACK FOOTER ===== */
 .site-footer{
-  position:relative;
-  width:100vw;
-  margin-left:calc(-50vw + 50%);
   background:#000;
   color:#e6e6e6;
   padding:90px 60px 40px;
@@ -257,59 +255,59 @@ h1{
 
 .footer-inner{
   max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
   gap:120px;
 }
 
-.footer-brand h3{
+.footer-left h3{
   font-family:'Playfair Display',serif;
   font-size:2.2rem;
   margin-bottom:20px;
-  color:#fff;
+  color:#ffffff;
 }
 
-.footer-brand p{
+.footer-left p{
   font-size:1.05rem;
   line-height:1.9;
-  color:#ccc;
+  color:#cccccc;
   max-width:420px;
 }
 
-.footer-contact h4{
+.footer-right h4{
   font-family:'Playfair Display',serif;
   font-size:1.8rem;
   margin-bottom:25px;
-  color:#fff;
+  color:#ffffff;
 }
 
-.footer-contact p{
+.footer-right p{
   font-size:1.05rem;
   line-height:2;
-  margin-bottom:18px;
-  color:#ccc;
+  margin-bottom:16px;
+  color:#cccccc;
 }
 
 .footer-bottom{
   text-align:center;
   margin-top:80px;
   font-size:0.95rem;
-  color:#999;
+  color:#999999;
 }
 
-/* MOBILE SAFE */
+/* ===== MOBILE COMPATIBLE ===== */
 @media(max-width:768px){
   .footer-inner{
-    grid-template-columns:1fr;
+    flex-direction:column;
     gap:60px;
   }
+
   .site-footer{
     padding:70px 30px 35px;
   }
 }
-
-
 </style>
 </head>
 
@@ -451,10 +449,12 @@ h1{
   </div>
 </div>
 
-<<footer class="site-footer" id="contact">
+<footer class="site-footer" id="contact">
+
   <div class="footer-inner">
 
-    <div class="footer-brand">
+    <!-- LEFT SIDE -->
+    <div class="footer-left">
       <h3>Bellique Studios</h3>
       <p>
         Premium salon experiences crafted with care,
@@ -462,7 +462,8 @@ h1{
       </p>
     </div>
 
-    <div class="footer-contact">
+    <!-- RIGHT SIDE -->
+    <div class="footer-right">
       <h4>Contact</h4>
       <p>
         Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
@@ -471,15 +472,18 @@ h1{
       </p>
       <p>Anindita Roy Barman</p>
       <p>📞 6377921395</p>
-      <p>Email us: bellique​studios@gmail.com</p>
+      <p>Email us: belliquestudios@gmail.com</p>
     </div>
 
   </div>
 
+  <!-- BOTTOM -->
   <div class="footer-bottom">
     © 2026 Bellique Studios. All Rights Reserved.
   </div>
+
 </footer>
+
 
 
 <script>
