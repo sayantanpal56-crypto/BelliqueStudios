@@ -10,7 +10,6 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -72,13 +71,8 @@ margin:auto;
 }
 
 /* SECTIONS */
-section{
-padding:110px 20px;
-}
-.container{
-max-width:1200px;
-margin:auto;
-}
+section{padding:110px 20px}
+.container{max-width:1200px;margin:auto}
 
 /* ABOUT */
 .about{
@@ -179,8 +173,8 @@ margin-bottom:60px;
 }
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:45px;
 }
 .card{
 background:#fff;
@@ -192,15 +186,26 @@ box-shadow:0 30px 60px rgba(0,0,0,.15);
 transition:.5s;
 }
 .card:hover{transform:translateY(-14px)}
-.card img{width:100%;height:260px;object-fit:cover}
-.card div{padding:30px}
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+.card div{
+padding:35px;
+}
 .card h3{
 font-family:'Playfair Display',serif;
-font-size:1.6rem;
+font-size:1.7rem;
+margin-bottom:10px;
+}
+.card p{
+font-size:1.02rem;
+line-height:1.8;
 }
 
 /* BOOK */
-.book-wrap{text-align:center;margin-top:80px}
+.book-wrap{text-align:center;margin-top:90px}
 .book-btn{
 padding:22px 70px;
 font-size:18px;
@@ -239,7 +244,6 @@ font-size:14px;
 }
 
 @keyframes pulse{50%{transform:scale(1.06)}}
-
 @media(max-width:900px){
 .about,.services{padding:50px}
 .founder{grid-template-columns:1fr}
@@ -260,35 +264,34 @@ header h1{font-size:3rem}
 </nav>
 
 <header>
-<div>
 <h1>Bellique Studios</h1>
 <p>
 A refined beauty destination where luxury meets individuality —
 crafted exclusively for the modern woman.
 </p>
-</div>
 </header>
 
 <section id="about">
 <div class="container about">
 <h2>About Bellique Studios</h2>
 <p>
-Bellique Studios is a premium women’s salon designed as a sanctuary of elegance,
-confidence, and personalised beauty. Every service is delivered with precision,
-care, and a deep understanding of individual style.
+Bellique Studios is a premium women’s salon offering thoughtfully curated hair,
+makeup, and skin services designed to enhance confidence and elegance.
+Every experience is personalised, refined, and delivered with the highest
+standards of care.
 </p>
 
 <div class="offer-slider">
 <div class="offer-slide active" style="background-image:url('https://images.unsplash.com/photo-1595475038784-bbe439ff41e6')">
 <div class="offer-overlay"><div class="offer-text">
 <h3>Flat 20% OFF</h3>
-<p>A special welcome gesture for your first Bellique experience.</p>
+<p>A refined welcome privilege for your first Bellique experience.</p>
 </div></div></div>
 
 <div class="offer-slide" style="background-image:url('https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd')">
 <div class="offer-overlay"><div class="offer-text">
 <h3>Bridal Luxury</h3>
-<p>Exclusive bridal hair & makeup experiences curated to perfection.</p>
+<p>End-to-end bridal hair and makeup artistry curated to perfection.</p>
 </div></div></div>
 
 <div class="offer-slide" style="background-image:url('https://images.unsplash.com/photo-1556228578-8c89e6adf883')">
@@ -307,23 +310,19 @@ care, and a deep understanding of individual style.
 <h2>Meet the Founder</h2>
 <p>
 <strong>Anindita Roy Barman</strong>, the founder and creative force behind Bellique Studios,
-is guided by a singular philosophy — that true beauty begins with confidence and is elevated
-through care, intention, and artistry. With an instinctive eye for elegance and a deep respect
-for individuality, she envisioned Bellique Studios as more than a salon; she created it as a
-refined sanctuary where modern women can pause, feel understood, and rediscover their most
-confident selves.
+believes that true beauty is an expression of confidence, comfort, and individuality.
+With a refined eye for elegance and a deep respect for personal style, she envisioned
+Bellique Studios as a sanctuary where modern women feel seen, heard, and celebrated.
 <br><br>
-Anindita’s journey into the world of beauty was shaped by her fascination with how thoughtful
-grooming can transform not only appearance, but mindset. She believes that beauty should never
-feel intimidating or impersonal, but intuitive, comforting, and empowering. Drawing inspiration
-from global luxury salons and the evolving aspirations of Indian women, she built a space that
-seamlessly blends international standards with warmth, grace, and personal attention.
+Her journey into beauty began with an understanding that grooming has the power to
+transform mindset as much as appearance. Drawing inspiration from global luxury salons,
+Anindita built Bellique Studios to blend international standards with warmth, empathy,
+and personalised care.
 <br><br>
-Every detail at Bellique Studios reflects her vision — from the calm, elegant ambience and
-curated product choices to personalised consultations and honest recommendations. Under her
-leadership, Bellique Studios has become a trusted beauty destination known for refined artistry,
-consistency, and heartfelt service, where every woman leaves radiant, assured, and beautifully
-herself.
+Every detail — from curated products to bespoke consultations — reflects her philosophy.
+Under her leadership, Bellique Studios has become a trusted destination where elegance,
+precision, and heartfelt service come together, ensuring every client leaves radiant,
+confident, and beautifully herself.
 </p>
 </div>
 </div>
@@ -336,17 +335,41 @@ herself.
 
 <a href="hair-styling.html" class="card">
 <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f">
-<div><h3>Hair Styling</h3><p>Precision cuts & luxury care</p></div>
+<div>
+<h3>Hair Styling & Care</h3>
+<p>
+Our hair services combine precision artistry with premium care.
+From personalised haircuts and advanced styling to bridal hairstyles,
+hair spas, smoothening, and restorative treatments, every service is
+tailored to enhance texture, health, and individuality.
+</p>
+</div>
 </a>
 
 <a href="makeup.html" class="card">
 <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd">
-<div><h3>Makeup</h3><p>Bridal & HD artistry</p></div>
+<div>
+<h3>Makeup Artistry</h3>
+<p>
+Our makeup services are crafted to suit every occasion — from subtle
+day looks to glamorous party and bridal makeup. Using premium products
+and expert techniques, we create flawless, long-lasting finishes that
+highlight natural beauty.
+</p>
+</div>
 </a>
 
 <a href="skin-treatment.html" class="card">
 <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883">
-<div><h3>Skin Treatment</h3><p>Advanced facials & rejuvenation</p></div>
+<div>
+<h3>Skin Treatments</h3>
+<p>
+Our skin treatments focus on rejuvenation, relaxation, and long-term
+skin health. From luxury facials and advanced therapies to waxing and
+hand & foot rituals, each treatment is designed to restore glow and
+well-being.
+</p>
+</div>
 </a>
 
 </div>
