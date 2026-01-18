@@ -246,7 +246,10 @@ h1{
 /* FOOTER */
 /* ===== PREMIUM RESPONSIVE FOOTER ===== */
 .site-footer{
-  background:radial-gradient(circle at top,#1a1a1a,#000);
+  position:relative;
+  width:100vw;
+  margin-left:calc(-50vw + 50%);
+  background:#000;
   color:#e6e6e6;
   padding:90px 60px 40px;
   font-family:'Poppins',sans-serif;
@@ -258,20 +261,19 @@ h1{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:120px;
-  align-items:start;
 }
 
 .footer-brand h3{
   font-family:'Playfair Display',serif;
   font-size:2.2rem;
   margin-bottom:20px;
-  color:#ffffff;
+  color:#fff;
 }
 
 .footer-brand p{
   font-size:1.05rem;
   line-height:1.9;
-  color:#cccccc;
+  color:#ccc;
   max-width:420px;
 }
 
@@ -279,57 +281,31 @@ h1{
   font-family:'Playfair Display',serif;
   font-size:1.8rem;
   margin-bottom:25px;
-  color:#ffffff;
+  color:#fff;
 }
 
 .footer-contact p{
   font-size:1.05rem;
   line-height:2;
-  margin:0 0 18px;
-  color:#cccccc;
-}
-
-.footer-contact .name{
-  margin-top:30px;
-  font-weight:500;
-  color:#ffffff;
-}
-
-.footer-contact .phone,
-.footer-contact .email{
-  font-size:1.05rem;
+  margin-bottom:18px;
+  color:#ccc;
 }
 
 .footer-bottom{
   text-align:center;
   margin-top:80px;
   font-size:0.95rem;
-  color:#9a9a9a;
+  color:#999;
 }
 
-/* ===== MOBILE OPTIMISATION (SAFE) ===== */
+/* MOBILE SAFE */
 @media(max-width:768px){
-  .site-footer{
-    padding:70px 30px 35px;
-  }
-
   .footer-inner{
     grid-template-columns:1fr;
     gap:60px;
-    text-align:left;
   }
-
-  .footer-brand h3{
-    font-size:2rem;
-  }
-
-  .footer-contact h4{
-    font-size:1.6rem;
-  }
-
-  .footer-bottom{
-    margin-top:60px;
-    font-size:0.9rem;
+  .site-footer{
+    padding:70px 30px 35px;
   }
 }
 
@@ -474,10 +450,9 @@ h1{
   </div>
 </div>
 
-<footer class="site-footer" id="contact">
+<<footer class="site-footer" id="contact">
   <div class="footer-inner">
 
-    <!-- LEFT: BRAND -->
     <div class="footer-brand">
       <h3>Bellique Studios</h3>
       <p>
@@ -486,19 +461,16 @@ h1{
       </p>
     </div>
 
-    <!-- RIGHT: CONTACT -->
     <div class="footer-contact">
       <h4>Contact</h4>
-
       <p>
         Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
         Vaibhav Khand, Indirapuram,<br>
         Ghaziabad, Uttar Pradesh
       </p>
-
-      <p class="name">Anindita Roy Barman</p>
-      <p class="phone">📞 6377921395</p>
-      <p class="email">Email us: bellique​studios@gmail.com</p>
+      <p>Anindita Roy Barman</p>
+      <p>📞 6377921395</p>
+      <p>Email us: bellique​studios@gmail.com</p>
     </div>
 
   </div>
