@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skin Treatments | Bellique Studios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#c59d5f;
+  --dark:#111;
+  --light:#fff;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top left,#fff1eb,#ace0f9,#fbc2eb);
+  color:var(--dark);
+}
+
+section{
+  max-width:1300px;
+  margin:auto;
+  padding:90px 30px;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;
+  text-align:center;
+  margin-bottom:90px;
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.service-block{
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:80px;
+  margin-bottom:120px;
+  align-items:center;
+}
+
+.service-img img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:30px;
+  border:6px solid rgba(197,157,95,0.6);
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+  transition:transform .5s ease;
+}
+.service-img img:hover{transform:scale(1.05)}
+
+.service-content h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  color:var(--gold);
+}
+
+.service-content p{
+  font-size:1.05rem;
+  line-height:1.9;
+}
+
+.service-content ul{
+  padding-left:20px;
+  line-height:2;
+}
+
+.cta-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 34px;
+  background:var(--gold);
+  color:#fff;
+  text-decoration:none;
+  border-radius:40px;
+  font-size:1rem;
+  cursor:pointer;
+}
+.cta-btn:hover{background:#b0894d}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+}
+
+.modal-box h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:20px;
+}
+
+.modal-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+}
+
+.modal-box button{
+  width:100%;
+  padding:14px;
+  background:var(--gold);
+  color:#fff;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.close{
+  float:right;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.highlight{
+  text-align:center;
+  font-size:1.15rem;
+  margin-top:60px;
+  color:var(--gold);
+}
+
+@media(max-width:900px){
+  .service-block{grid-template-columns:1fr}
+  h1{font-size:2.4rem}
+  .service-img img{height:300px}
+}
+
+/* PREMIUM FOOTER */
+.premium-footer{
+  background:#1c1c1c;
+  color:#bdbdbd;
+  padding:80px 30px 30px;
+}
+.footer-inner{
+  max-width:1300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:120px;
+}
+.footer-col h3{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;
+  color:#ffffff;
+  margin-bottom:25px;
+}
+.footer-title{
+  font-size:1.1rem;
+  font-weight:500;
+  margin-bottom:20px;
+  color:#dcdcdc;
+}
+.footer-col p{
+  font-size:1rem;
+  line-height:2;
+  margin:0;
+}
+.footer-highlight{
+  font-size:1.05rem;
+  color:#ffffff;
+}
+.footer-bottom{
+  margin-top:60px;
+  text-align:right;
+  font-size:0.95rem;
+  color:#9a9a9a;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .service-block{grid-template-columns:1fr}
+  h1{font-size:2.4rem}
+  .service-img img{height:300px}
+  .footer-inner{grid-template-columns:1fr;gap:60px}
+  .footer-bottom{text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h1>Luxury Skin Treatments</h1>
+
+<!-- FACIALS -->
+<div class="service-block">
+  <div class="service-img">
+    <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=80" alt="Luxury Facial">
+  </div>
+  <div class="service-content">
+    <h2>Signature Facial Experiences</h2>
+    <p>
+      At Bellique Studios, our facial rituals are designed to revive tired skin,
+      restore balance, and reveal a natural, healthy glow. Each session begins
+      with a personalised skin consultation.
+    </p>
+    <p>
+      Using premium products and calming massage techniques, we deeply cleanse,
+      exfoliate, hydrate, and nourish your skin — leaving it visibly refreshed
+      and relaxed.
+    </p>
+    <ul>
+      <li>Glow-enhancing & hydration facials</li>
+      <li>Deep cleansing & detox treatments</li>
+      <li>Anti-acne & calming facial therapies</li>
+      <li>Relaxation-focused facial rituals</li>
+    </ul>
+    <a class="cta-btn" onclick="openForm('Signature Facial')">Book Now</a>
+  </div>
+</div>
+
+!-- HYDRA FACIAL -->
+<div class="service-block">
+  <div class="service-img">
+    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80" alt="Hydra Facial">
+  </div>
+  <div class="service-content">
+    <h2>Hydra Facial Therapy</h2>
+    <p>
+      Our Hydra Facial is an advanced multi-step treatment that deeply cleanses,
+      exfoliates, and infuses intense hydration into the skin — all in one session.
+    </p>
+    <p>
+      Perfect before events, this therapy delivers instant glow, smoother texture,
+      and a glass-skin finish with zero downtime.
+    </p>
+    <ul>
+      <li>Instant hydration & skin renewal</li>
+      <li>Improves texture, clarity & radiance</li>
+      <li>Ideal before weddings & celebrations</li>
+    </ul>
+    <a class="cta-btn" onclick="openForm('Hydra Facial')">Book Now</a>
+  </div>
+</div>
+
+<!-- MANICURE PEDICURE -->
+<div class="service-block">
+  <div class="service-img">
+    <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?auto=format&fit=crop&w=1200&q=80" alt="Manicure Pedicure">
+  </div>
+  <div class="service-content">
+    <h2>Luxury Manicure & Pedicure</h2>
+    <p>
+      Our manicure and pedicure services are indulgent rituals crafted to
+      rejuvenate your hands and feet while promoting relaxation and care.
+    </p>
+    <p>
+      From grooming and exfoliation to massage and hydration, every step is
+      performed with precision and hygiene.
+    </p>
+    <ul>
+      <li>Classic & deluxe pedicure services</li>
+      <li>Hydrating hand & foot care</li>
+      <li>Relaxing massage techniques</li>
+    </ul>
+    <a class="cta-btn" onclick="openForm('Manicure & Pedicure')">Book Now</a>
+  </div>
+</div>
+
+<div class="service-block">
+  <div class="service-img">
+    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" alt="Waxing Services">
+  </div>
+  <div class="service-content">
+    <h2>Gentle & Hygienic Waxing</h2>
+    <p>
+      Our waxing services are designed for comfort, safety, and long-lasting
+      smoothness using premium waxes suitable for sensitive skin.
+    </p>
+    <p>
+      Hygiene and care are our priority, ensuring minimal irritation and
+      maximum confidence after every session.
+    </p>
+    <ul>
+      <li>Full body & sensitive area waxing</li>
+      <li>Premium wax suitable for all skin types</li>
+      <li>Clean, professional & comfortable service</li>
+    </ul>
+    <a class="cta-btn" onclick="openForm('Waxing')">Book Now</a>
+  </div>
+</div>
+
+<p class="highlight">
+✨ At Bellique Studios, skin care is an experience of calm, care and confidence.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="premium-footer">
+  <div class="footer-inner">
+
+    <!-- LOCATION -->
+    <div class="footer-col">
+      <h3>Location</h3>
+      <p class="footer-title">Bellique Studios</p>
+      <p>
+        Flat no 406, Osimo 2,<br>
+        Mahagun Mansion 2,<br>
+        Vaibhav Khand, Indirapuram,<br>
+        Ghaziabad, Uttar Pradesh
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>Get in touch</h3>
+      <p>Email us:</p>
+      <p class="footer-highlight">belliquestudios@gmail.com</p>
+      <p style="margin-top:25px;">Call us:</p>
+      <p class="footer-highlight">6377921395</p>
+      <p style="margin-top:15px;">Name: Anindita Roy Barman</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Bellique Studios. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="bookingModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeForm()">×</span>
+    <h3>Book Appointment</h3>
+    <input id="name" placeholder="Your Name" required>
+    <input id="phone" placeholder="Phone Number" required>
+    <input id="email" placeholder="Email ID" required>
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <button onclick="sendWhatsApp()">Confirm Booking</button>
+  </div>
+</div>
+
+<script>
+let selectedService="";
+
+function openForm(service){
+  selectedService=service;
+  setDateTimeLimits();
+  bookingModal.style.display="flex";
+}
+
+function closeForm(){
+  bookingModal.style.display="none";
+}
+
+function setDateTimeLimits(){
+  const now=new Date();
+  const today=now.toISOString().split("T")[0];
+  date.min=today;
+
+  date.onchange=function(){
+    if(this.value===today){
+      const h=String(now.getHours()).padStart(2,"0");
+      const m=String(now.getMinutes()).padStart(2,"0");
+      time.min=`${h}:${m}`;
+    }else{
+      time.min="00:00";
+    }
+  }
+}
+
+function sendWhatsApp(){
+  const msg=`🌸 New Skin Treatment Booking 🌸
+Service: ${selectedService}
+Name: ${name.value}
+Phone: ${phone.value}
+Email: ${email.value}
+Date: ${date.value}
+Time: ${time.value}`;
+
+  window.open(
+    "https://wa.me/916377921395?text="+encodeURIComponent(msg),
+    "_blank"
+  );
+  closeForm();
+}
+</script>
+
+</body>
+</html>
