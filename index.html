@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Bellique Studios | Premium Women's Salon</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=1200">
+  
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -15,6 +15,7 @@ margin:0;
 font-family:'Poppins',sans-serif;
 background:#f7f6f4;
 color:#222;
+-webkit-text-size-adjust:100%;
 }
 
 /* NAVBAR */
@@ -31,11 +32,14 @@ padding:18px 60px;
 z-index:999;
 box-shadow:0 10px 40px rgba(0,0,0,.08);
 }
-nav strong{
+nav a.logo{
 font-family:'Playfair Display',serif;
 font-size:24px;
 letter-spacing:1px;
+ext-decoration:none;
+color:#111;
 }
+nav a.logo:hover{color:#a18cd1}
 nav a{
 margin:0 20px;
 text-decoration:none;
@@ -255,7 +259,7 @@ header h1{font-size:3rem}
 <body>
 
 <nav>
-<strong>Bellique Studios</strong>
+<a href="index.html" class="logo">Bellique Studios</a>
 <div>
 <a href="#about">About</a>
 <a href="#services">Services</a>
