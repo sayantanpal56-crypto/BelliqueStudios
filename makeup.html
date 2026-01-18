@@ -242,68 +242,60 @@ h1{
   font-size:22px;
   cursor:pointer;
 }
+./* ===== FIXED DESKTOP-LIKE FOOTER (SAME ON MOBILE) ===== */
 .site-footer{
-  position:relative;
-  width:100vw;
-  margin-left:calc(-50vw + 50%);
   background:#000;
-  color:#e6e6e6;
-  padding:90px 60px 40px;
-  font-family:'Poppins',sans-serif;
+  color:#eee;
+  padding:90px 0 40px;
+  width:100%;
 }
 
+/* lock width so mobile does NOT rearrange */
 .footer-inner{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
   gap:120px;
 }
 
-.footer-brand h3{
+/* LEFT */
+.footer-left h3{
   font-family:'Playfair Display',serif;
   font-size:2.2rem;
   margin-bottom:20px;
-  color:#fff;
 }
-
-.footer-brand p{
+.footer-left p{
   font-size:1.05rem;
   line-height:1.9;
-  color:#ccc;
   max-width:420px;
+  color:#ccc;
 }
 
-.footer-contact h4{
+/* RIGHT */
+.footer-right h4{
   font-family:'Playfair Display',serif;
   font-size:1.8rem;
   margin-bottom:25px;
-  color:#fff;
 }
-
-.footer-contact p{
+.footer-right p{
   font-size:1.05rem;
   line-height:2;
-  margin-bottom:18px;
   color:#ccc;
+  margin-bottom:15px;
+}
+.footer-right .name{
+  color:#fff;
+  font-weight:500;
 }
 
+/* BOTTOM */
 .footer-bottom{
   text-align:center;
-  margin-top:80px;
+  margin-top:70px;
   font-size:0.95rem;
   color:#999;
-}
-
-/* MOBILE SAFE */
-@media(max-width:768px){
-  .footer-inner{
-    grid-template-columns:1fr;
-    gap:60px;
-  }
-  .site-footer{
-    padding:70px 30px 35px;
-  }
 }
 
 </style>
@@ -432,40 +424,37 @@ h1{
 </div>
 
 </section>
-<footer id="contact">
-<div class="footer-grid">
-<div>
-<h4>Bellique Studios</h4>
-<p>Premium salon experiences crafted with care, confidence, and elegance.</p>
-</div>
-<div>
-<h4>Contact</h4>
-<p>
-Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
-Vaibhav Khand, Indirapuram,<br>
-Ghaziabad, Uttar Pradesh<br><br>
-Anindita Roy Barman<br>
-📞 6377921395<br>
-Email us: belliquestudios@gmail.com<br>
-</p>
-</div>
-</div>
-<div class="copy">© 2026 Bellique Studios. All Rights Reserved.</div>
-</footer>
-<!-- BOOKING MODAL -->
-<div class="modal" id="bookingModal">
-  <div class="modal-box">
-    <span class="close" onclick="closeForm()">×</span>
-    <h3>Book Appointment</h3>
-    <input id="name" placeholder="Your Name" required>
-    <input id="phone" placeholder="Phone Number" required>
-    <input id="email" placeholder="Email ID" required>
-    <input type="date" id="date" required>
-    <input type="time" id="time" required>
-    <button onclick="sendWhatsApp()">Confirm Booking</button>
-  </div>
-</div>
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
 
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h3>Bellique Studios</h3>
+      <p>
+        Premium salon experiences crafted with care,
+        confidence, and elegance.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <h4>Contact</h4>
+      <p>
+        Flat no 406, Osimo 2, Mahagun Mansion 2,<br>
+        Vaibhav Khand, Indirapuram,<br>
+        Ghaziabad, Uttar Pradesh
+      </p>
+      <p class="name">Anindita Roy Barman</p>
+      <p>📞 6377921395</p>
+      <p>Email us: belliquestudios@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Bellique Studios. All Rights Reserved.
+  </div>
+</footer>
 
 
 <script>
